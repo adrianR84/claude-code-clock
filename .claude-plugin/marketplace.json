@@ -1,0 +1,25 @@
+{
+  "name": "claude-code-timestamp-hook",
+  "owner": {
+    "name": "adrianR84"
+  },
+  "description": "A Claude Code hook plugin that injects the current wall-clock time into every assistant turn, solving duration hallucination, stale process blindness, and log correlation failure.",
+  "plugins": [
+    {
+      "name": "timestamp-hook",
+      "source": "./",
+      "description": "A Claude Code hook that injects wall-clock time into every assistant turn, solving duration hallucination, stale process blindness, and log correlation failure.",
+      "category": "productivity",
+      "repository": "https://github.com/MohamedBIqbal/claude-code-timestamp-hook",
+      "keywords": [
+        "hook",
+        "timestamp",
+        "time",
+        "wall-clock",
+        "context"
+      ],
+      "license": "MIT",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "description": "Inject wall-clock time into every assistant turn",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/hooks/timestamp-inject.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
