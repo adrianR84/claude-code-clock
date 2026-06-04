@@ -1,4 +1,4 @@
-# Timestamp Hook
+# Claude Clock
 
 A Claude Code plugin that automatically injects the current wall-clock time into every assistant turn.
 
@@ -24,11 +24,11 @@ Claude Code has **no sense of time**. Between your messages, it does not know wh
 **Slash commands:**
 1. Add the marketplace:
    ```
-   /plugin marketplace add adrianR84/claude-code-timestamp-hook
+   /plugin marketplace add adrianR84/claude-code-clock
    ```
 2. Install the plugin:
    ```
-   /plugin install timestamp-hook
+   /plugin install claude-clock
    ```
 3. Reload plugins:
    ```
@@ -37,8 +37,8 @@ Claude Code has **no sense of time**. Between your messages, it does not know wh
 
 **CLI commands:**
 ```bash
-claude plugin marketplace add adrianR84/claude-code-timestamp-hook
-claude plugin install timestamp-hook
+claude plugin marketplace add adrianR84/claude-code-clock
+claude plugin install claude-clock
 claude plugin reload
 ```
 
@@ -58,7 +58,7 @@ The hook is a bash script that runs on every `UserPromptSubmit` hook:
 ```bash
 #!/bin/bash
 NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')
-echo "{\"additionalContext\":\"Current time: ${NOW}\",\"statusMessage\":\"${NOW}\"}"
+echo "{\"continue\":true,\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Current time: ${NOW}\",\"statusMessage\":\"${NOW}\"}}"
 ```
 
 It uses POSIX `date` with no external dependencies.
