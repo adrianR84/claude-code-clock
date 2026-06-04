@@ -10,7 +10,7 @@
       "source": "./",
       "description": "A Claude Code hook that injects wall-clock time into every assistant turn, solving duration hallucination, stale process blindness, and log correlation failure.",
       "category": "productivity",
-      "repository": "https://github.com/MohamedBIqbal/claude-code-timestamp-hook",
+      "repository": "https://github.com/adrianR84/claude-code-clock",
       "keywords": [
         "hook",
         "timestamp",
