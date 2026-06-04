@@ -4,4 +4,4 @@
 # Zero dependencies. ~2ms overhead per prompt.
 
 NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')
-echo "{\"continue\":true,\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Current time: ${NOW}\"}}"
+echo "{\"continue\":true,\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Current time: ${NOW}\",\"statusMessage\":\"${NOW}\"}}"
