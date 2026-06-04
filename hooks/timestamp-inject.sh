@@ -3,5 +3,5 @@
 # Configured in settings.json as UserPromptSubmit hook type.
 # Zero dependencies. ~2ms overhead per prompt.
 
-NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')
+NOW=$(date '+%Y-%m-%d %H:%M:%S %Z %z')
 echo "{\"continue\":true,\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Current time: ${NOW}\",\"statusMessage\":\"${NOW}\"}}"
