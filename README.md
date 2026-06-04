@@ -16,7 +16,6 @@ Claude Code has **no sense of time**. Between your messages, it does not know wh
 - **~2ms latency** — negligible overhead
 - **~10 tokens per turn** — minimal context cost
 - **Zero dependencies** — POSIX `date` only
-- **Status bar visibility** — you can see the timestamp, not just Claude
 
 ## Installation
 
@@ -43,16 +42,6 @@ claude plugin install timestamp-hook
 claude plugin reload
 ```
 
-### Manual Install
-
-1. Copy `hooks/timestamp-inject.sh` to `.claude/hooks/` in your project
-2. Register the hook in `.claude/settings.json`:
-   ```json
-   "UserPromptSubmit": {
-     "timestamp-inject": "bash .claude/hooks/timestamp-inject.sh"
-   }
-   ```
-3. Restart Claude Code
 
 ## Usage
 
