@@ -1,5 +1,5 @@
 {
-  "name": "timestamp-hook",
+  "name": "claude-clock",
   "version": "1.0.1",
   "description": "Claude Code hook that injects wall-clock time into every assistant turn, solving duration hallucination, stale process blindness, and log correlation failure.",
   "author": {
