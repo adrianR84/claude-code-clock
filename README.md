@@ -57,7 +57,7 @@ The hook is a bash script that runs on every `UserPromptSubmit` hook:
 
 ```bash
 #!/bin/bash
-NOW=$(date '+%Y-%m-%d %H:%M:%S %Z')
+NOW=$(date '+%Y-%m-%d %H:%M:%S %Z %z')
 echo "{\"continue\":true,\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"Current time: ${NOW}\",\"statusMessage\":\"${NOW}\"}}"
 ```
 
